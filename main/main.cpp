@@ -116,11 +116,12 @@ int main()
             cout << "What position would you like to change the numbers of?" << endl;
             cin >> pos_value;
 
-            if (pos_value > count)
+            if (pos_value >= count)
             {
+
                 cin.clear();
                 cin.ignore(numeric_limits<int>::max(), '\n');
-                throw runtime_error("Invalid input for the specified position");
+                throw runtime_error("Invalid input for the specified position. Position is from 0 - 99.");
             }
 
             cout << "\nWhat is your new value?" << endl;
